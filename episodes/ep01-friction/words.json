@@ -1,0 +1,562 @@
+[
+{
+"word": "If",
+"start": 0.313,
+"end": 0.433
+},
+{
+"word": "friction",
+"start": 0.36,
+"end": 0.72
+},
+{
+"word": "disappeared...",
+"start": 0.8,
+"end": 1.8
+},
+{
+"word": "for",
+"start": 2.0,
+"end": 2.16
+},
+{
+"word": "5",
+"start": 2.24,
+"end": 2.48
+},
+{
+"word": "seconds...",
+"start": 2.56,
+"end": 3.32
+},
+{
+"word": "At",
+"start": 3.72,
+"end": 3.8400000000000003
+},
+{
+"word": "first,",
+"start": 3.92,
+"end": 4.16
+},
+{
+"word": "it's",
+"start": 4.24,
+"end": 4.48
+},
+{
+"word": "AMAZING.",
+"start": 4.56,
+"end": 5.52
+},
+{
+"word": "One",
+"start": 5.76,
+"end": 5.92
+},
+{
+"word": "push,",
+"start": 6.0,
+"end": 6.4
+},
+{
+"word": "and",
+"start": 6.48,
+"end": 6.6000000000000005
+},
+{
+"word": "you",
+"start": 6.68,
+"end": 6.8
+},
+{
+"word": "glide",
+"start": 6.88,
+"end": 7.2
+},
+{
+"word": "across",
+"start": 7.28,
+"end": 7.6
+},
+{
+"word": "the",
+"start": 7.64,
+"end": 7.76
+},
+{
+"word": "room.",
+"start": 7.76,
+"end": 8.32
+},
+{
+"word": "But",
+"start": 8.629,
+"end": 8.748999999999999
+},
+{
+"word": "you",
+"start": 8.72,
+"end": 8.84
+},
+{
+"word": "can't",
+"start": 8.88,
+"end": 9.12
+},
+{
+"word": "stop.",
+"start": 9.2,
+"end": 9.8
+},
+{
+"word": "Nothing",
+"start": 10.0,
+"end": 10.32
+},
+{
+"word": "slows",
+"start": 10.4,
+"end": 10.64
+},
+{
+"word": "you",
+"start": 10.72,
+"end": 10.84
+},
+{
+"word": "down.",
+"start": 11.0,
+"end": 11.44
+},
+{
+"word": "You",
+"start": 11.68,
+"end": 11.799999999999999
+},
+{
+"word": "can't",
+"start": 11.8,
+"end": 12.0
+},
+{
+"word": "walk",
+"start": 12.08,
+"end": 12.32
+},
+{
+"word": "either.",
+"start": 12.4,
+"end": 12.92
+},
+{
+"word": "Your",
+"start": 13.12,
+"end": 13.28
+},
+{
+"word": "feet",
+"start": 13.36,
+"end": 13.6
+},
+{
+"word": "just",
+"start": 13.68,
+"end": 13.84
+},
+{
+"word": "slip",
+"start": 13.92,
+"end": 14.08
+},
+{
+"word": "in",
+"start": 14.16,
+"end": 14.28
+},
+{
+"word": "place.",
+"start": 14.32,
+"end": 15.0
+},
+{
+"word": "Your",
+"start": 15.2,
+"end": 15.36
+},
+{
+"word": "phone",
+"start": 15.44,
+"end": 15.68
+},
+{
+"word": "slips",
+"start": 15.76,
+"end": 16.08
+},
+{
+"word": "right",
+"start": 16.16,
+"end": 16.32
+},
+{
+"word": "out",
+"start": 16.36,
+"end": 16.48
+},
+{
+"word": "of",
+"start": 16.44,
+"end": 16.560000000000002
+},
+{
+"word": "your",
+"start": 16.56,
+"end": 16.72
+},
+{
+"word": "fingers.",
+"start": 16.76,
+"end": 17.48
+},
+{
+"word": "Your",
+"start": 17.52,
+"end": 17.68
+},
+{
+"word": "shoelaces",
+"start": 17.76,
+"end": 18.32
+},
+{
+"word": "slip",
+"start": 18.36,
+"end": 18.56
+},
+{
+"word": "loose.",
+"start": 18.64,
+"end": 19.4
+},
+{
+"word": "They",
+"start": 19.44,
+"end": 19.560000000000002
+},
+{
+"word": "need",
+"start": 19.64,
+"end": 19.76
+},
+{
+"word": "friction",
+"start": 19.84,
+"end": 20.16
+},
+{
+"word": "to",
+"start": 20.24,
+"end": 20.36
+},
+{
+"word": "stay",
+"start": 20.4,
+"end": 20.56
+},
+{
+"word": "tied.",
+"start": 20.64,
+"end": 21.28
+},
+{
+"word": "Outside,",
+"start": 21.6,
+"end": 22.587
+},
+{
+"word": "cars",
+"start": 22.693,
+"end": 22.813000000000002
+},
+{
+"word": "on",
+"start": 22.92,
+"end": 23.040000000000003
+},
+{
+"word": "flat",
+"start": 23.16,
+"end": 23.28
+},
+{
+"word": "roads",
+"start": 23.36,
+"end": 23.68
+},
+{
+"word": "can't",
+"start": 23.76,
+"end": 24.08
+},
+{
+"word": "steer",
+"start": 24.16,
+"end": 24.48
+},
+{
+"word": "or",
+"start": 24.56,
+"end": 24.68
+},
+{
+"word": "brake.",
+"start": 24.72,
+"end": 25.48
+},
+{
+"word": "A",
+"start": 25.52,
+"end": 25.64
+},
+{
+"word": "car",
+"start": 25.68,
+"end": 25.84
+},
+{
+"word": "at",
+"start": 25.96,
+"end": 26.080000000000002
+},
+{
+"word": "30",
+"start": 26.12,
+"end": 26.32
+},
+{
+"word": "miles",
+"start": 26.4,
+"end": 26.56
+},
+{
+"word": "an",
+"start": 26.64,
+"end": 26.76
+},
+{
+"word": "hour",
+"start": 26.8,
+"end": 27.04
+},
+{
+"word": "slides",
+"start": 27.12,
+"end": 27.6
+},
+{
+"word": "220",
+"start": 27.72,
+"end": 28.72
+},
+{
+"word": "feet.",
+"start": 28.8,
+"end": 29.16
+},
+{
+"word": "But",
+"start": 29.985,
+"end": 30.105
+},
+{
+"word": "here's",
+"start": 30.08,
+"end": 30.32
+},
+{
+"word": "the",
+"start": 30.4,
+"end": 30.56
+},
+{
+"word": "real",
+"start": 30.68,
+"end": 30.8
+},
+{
+"word": "problem...",
+"start": 30.88,
+"end": 31.68
+},
+{
+"word": "When",
+"start": 32.128,
+"end": 32.248
+},
+{
+"word": "friction",
+"start": 32.24,
+"end": 32.56
+},
+{
+"word": "comes",
+"start": 32.64,
+"end": 32.88
+},
+{
+"word": "back,",
+"start": 32.96,
+"end": 33.6
+},
+{
+"word": "it",
+"start": 33.68,
+"end": 33.92
+},
+{
+"word": "all",
+"start": 34.0,
+"end": 34.16
+},
+{
+"word": "comes",
+"start": 34.24,
+"end": 34.48
+},
+{
+"word": "back",
+"start": 34.56,
+"end": 34.72
+},
+{
+"word": "at",
+"start": 34.8,
+"end": 34.919999999999995
+},
+{
+"word": "once.",
+"start": 34.96,
+"end": 35.68
+},
+{
+"word": "Your",
+"start": 35.8,
+"end": 35.92
+},
+{
+"word": "feet",
+"start": 35.96,
+"end": 36.16
+},
+{
+"word": "catch.",
+"start": 36.24,
+"end": 36.96
+},
+{
+"word": "Your",
+"start": 37.08,
+"end": 37.2
+},
+{
+"word": "body...",
+"start": 37.4,
+"end": 37.92
+},
+{
+"word": "keeps",
+"start": 37.96,
+"end": 38.24
+},
+{
+"word": "going.",
+"start": 38.44,
+"end": 38.667
+},
+{
+"word": "Five",
+"start": 39.44,
+"end": 39.6
+},
+{
+"word": "stars",
+"start": 39.68,
+"end": 40.0
+},
+{
+"word": "for",
+"start": 40.04,
+"end": 40.16
+},
+{
+"word": "the",
+"start": 40.16,
+"end": 40.279999999999994
+},
+{
+"word": "slide.",
+"start": 40.32,
+"end": 41.12
+},
+{
+"word": "One",
+"start": 41.2,
+"end": 41.32
+},
+{
+"word": "star",
+"start": 41.36,
+"end": 41.6
+},
+{
+"word": "for",
+"start": 41.68,
+"end": 41.8
+},
+{
+"word": "the",
+"start": 41.8,
+"end": 41.919999999999995
+},
+{
+"word": "landing.",
+"start": 41.92,
+"end": 42.72
+},
+{
+"word": "Would",
+"start": 42.8,
+"end": 42.919999999999995
+},
+{
+"word": "you",
+"start": 42.96,
+"end": 43.08
+},
+{
+"word": "risk",
+"start": 43.16,
+"end": 43.28
+},
+{
+"word": "it?",
+"start": 43.36,
+"end": 43.92
+},
+{
+"word": "Yes...",
+"start": 44.12,
+"end": 44.64
+},
+{
+"word": "or",
+"start": 44.68,
+"end": 44.8
+},
+{
+"word": "no?",
+"start": 44.8,
+"end": 45.04
+}
+]

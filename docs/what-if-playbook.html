@@ -1,0 +1,242 @@
+<title>What If Format Playbook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow reading column; the 50-second beat sheet is the hero, drawn as a real timeline to scale. */
+:root{
+  --bg:#f3f5f9; --surface:#ffffff; --ink:#141a2b; --muted:#566079; --line:#d9deea;
+  --accent:#2747d6; --accent-soft:#e3e8fb; --cap:#ffd23f; --cap-ink:#141a2b;
+  --hook:#e0452b; --setup:#7a55d6; --chain:#2747d6; --twist:#0e9a8a; --pay:#c98a00;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1320; --surface:#171c2c; --ink:#e9ecf5; --muted:#9aa3bb; --line:#2a3148;
+  --accent:#8ea2ff; --accent-soft:#222b4d; --cap:#ffd23f; --cap-ink:#141a2b;
+  --hook:#ff6b52; --setup:#a88bff; --chain:#7d95ff; --twist:#3fd0bd; --pay:#f0b63a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1320; --surface:#171c2c; --ink:#e9ecf5; --muted:#9aa3bb; --line:#2a3148;
+  --accent:#8ea2ff; --accent-soft:#222b4d; --cap:#ffd23f; --cap-ink:#141a2b;
+  --hook:#ff6b52; --setup:#a88bff; --chain:#7d95ff; --twist:#3fd0bd; --pay:#f0b63a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:32px 64px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(2.2rem,7vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:1.6rem;font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.1rem;font-weight:600}
+p{margin:0;max-width:65ch}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:18px}
+.lede{font-size:1.15rem;color:var(--muted)}
+.hl{background:var(--cap);color:var(--cap-ink);padding:0 .25em;border-radius:3px}
+header{display:flex;flex-direction:column;gap:16px}
+
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.proof div{border-top:3px solid var(--accent);padding-top:10px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.proof b{font:800 1.8rem/1 var(--display);font-variant-numeric:tabular-nums}
+.proof span{font-size:.88rem;color:var(--muted);line-height:1.4}
+
+/* timeline */
+.tl{display:flex;height:46px;border-radius:8px;overflow:hidden;font:500 .72rem/1 var(--mono);color:#fff}
+.tl div{display:flex;align-items:center;justify-content:center;text-align:center;padding:0 4px;min-width:0;overflow:hidden;white-space:nowrap}
+.ticks{display:flex;justify-content:space-between;font:500 .72rem/1 var(--mono);color:var(--muted);margin-top:6px;font-variant-numeric:tabular-nums}
+.beats{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.beat{display:grid;grid-template-columns:92px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.beat .t{font:500 .82rem/1.3 var(--mono);font-variant-numeric:tabular-nums;display:flex;flex-direction:column;gap:6px}
+.beat .t i{display:block;width:28px;height:6px;border-radius:3px}
+.beat > div:last-child{min-width:0;display:flex;flex-direction:column;gap:6px}
+.say{font-style:italic;color:var(--muted)}
+
+/* spec + mock */
+.spec-grid{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:28px;align-items:start}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px}
+dt{font:500 .78rem/1.5 var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+dd{margin:0;min-width:0}
+.phone{width:220px;max-width:100%;aspect-ratio:9/16;border-radius:22px;position:relative;overflow:hidden;
+  background:radial-gradient(120% 70% at 50% 35%,#5b7bd8 0%,#2a3c7a 45%,#121a36 100%);border:6px solid var(--ink);justify-self:center}
+.phone .top{position:absolute;top:10%;left:8%;right:8%;text-align:center;font:800 1rem/1.15 var(--display);color:#fff;
+  text-transform:uppercase;text-shadow:0 2px 0 #000,0 0 6px rgba(0,0,0,.6)}
+.phone .top em{font-style:normal;color:var(--cap)}
+.phone .badge{position:absolute;top:44%;left:50%;transform:translateX(-50%);background:var(--cap);color:var(--cap-ink);
+  font:800 .78rem/1 var(--display);padding:7px 10px;border-radius:6px;white-space:nowrap;letter-spacing:.02em}
+.phone .cap{position:absolute;bottom:22%;left:0;right:0;text-align:center;font:800 1.35rem/1 var(--display);color:#fff;
+  text-transform:uppercase;text-shadow:0 0 0 #000,2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000}
+.phone .cap span{color:var(--cap)}
+.phone .fig{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:46%;height:34%;
+  background:radial-gradient(circle at 50% 22%,#f4c7a1 0 18%,transparent 19%),radial-gradient(ellipse at 50% 85%,#e0452b 0 44%,transparent 45%)}
+.mock-note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:8px}
+
+.twists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.twists div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.twists p{font-size:.93rem;color:var(--muted)}
+
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:520px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .72rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pick td:first-child{font-weight:600}
+.chip{display:inline-block;font:500 .7rem/1 var(--mono);padding:4px 7px;border-radius:99px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.chip.first{background:var(--cap);color:var(--cap-ink)}
+
+.cost{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.cost div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.cost div span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cost .total{font-weight:600}
+.note{font-size:.9rem;color:var(--muted)}
+ul.rules{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:8px;max-width:65ch}
+footer{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+
+@media (max-width:620px){
+  .spec-grid{grid-template-columns:1fr}
+  .twists{grid-template-columns:1fr}
+  .proof{grid-template-columns:1fr}
+  .beat{grid-template-columns:72px 1fr;gap:12px}
+  .tl div{font-size:.6rem}
+}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Step 2 · Niche locked</span>
+  <h1>What If… <span class="hl">For 5 Seconds</span></h1>
+  <p class="lede">Our niche is animated science "what if" Shorts. Each one asks an impossible question, walks through the chain of things that would happen, flips it with a twist, and ends on a YES/NO question that loops back to the start.</p>
+</header>
+
+<section>
+  <span class="eyebrow">Why this one</span>
+  <div class="proof">
+    <div><b>~1 month</b><span>Age of the lead channel in this format. Its first Short went up Oct 10. It now has 42.1K subscribers.</span></div>
+    <div><b>14.3M</b><span>Views on its top Short, "What If Time Stopped For 5 Seconds" (46 seconds long).</span></div>
+    <div><b>+236%</b><span>Growth in "what if animation" searches, with low competition (26/100).</span></div>
+  </div>
+  <p class="note">The same pattern shows up on Instagram and TikTok. Small accounts posting "what if" animations got 100–290x their normal views in the last 30 days. Source: vidIQ, Nov 13, 2026.</p>
+</section>
+
+<section>
+  <span class="eyebrow">The beat sheet · 50 seconds</span>
+  <h2>Every video follows this shape</h2>
+  <div>
+    <div class="tl" role="img" aria-label="Timeline: hook 0 to 3 seconds, setup 3 to 8, consequence chain 8 to 30, twist 30 to 40, payoff 40 to 50">
+      <div style="flex:3;background:var(--hook)">HOOK</div>
+      <div style="flex:5;background:var(--setup)">SETUP</div>
+      <div style="flex:22;background:var(--chain)">CONSEQUENCE CHAIN</div>
+      <div style="flex:10;background:var(--twist)">TWIST</div>
+      <div style="flex:10;background:var(--pay)">PAYOFF</div>
+    </div>
+    <div class="ticks"><span>0s</span><span>10s</span><span>20s</span><span>30s</span><span>40s</span><span>50s</span></div>
+  </div>
+  <div class="beats">
+    <div class="beat"><div class="t">0:00–0:03<i style="background:var(--hook)"></i></div><div>
+      <h3>Hook: ask the impossible question</h3>
+      <p>Say the title out loud while the title text sits at the top of the screen. The first frame already shows the impossible thing happening.</p>
+      <p class="say">"If friction disappeared for 5 seconds…"</p></div></div>
+    <div class="beat"><div class="t">0:03–0:08<i style="background:var(--setup)"></i></div><div>
+      <h3>Setup: the fun part people expect</h3>
+      <p>Show one shot of the cool fantasy version, so the viewer leans in.</p>
+      <p class="say">"At first, it'd feel like ice skating everywhere."</p></div></div>
+    <div class="beat"><div class="t">0:08–0:30<i style="background:var(--chain)"></i></div><div>
+      <h3>Consequence chain: 5–6 quick results</h3>
+      <p>Show one consequence per shot, about 3 seconds each. Give each a yellow stat badge, like "SPEED: 1,000 MPH". Every claim gets fact-checked.</p>
+      <p class="say">"Your shoes slide off. Knots untie. Every car on Earth keeps rolling…"</p></div></div>
+    <div class="beat"><div class="t">0:30–0:40<i style="background:var(--twist)"></i></div><div>
+      <h3>Twist: "But here's the real problem…"</h3>
+      <p>Reveal the counter-intuitive science that ruins the fantasy. This is what makes people rewatch and argue in the comments.</p></div></div>
+    <div class="beat"><div class="t">0:40–0:50<i style="background:var(--pay)"></i></div><div>
+      <h3>Payoff and the YES/NO question</h3>
+      <p>End on a short ironic punchline, then cut back to the opening shot and ask "Would you risk it? YES or NO." The video loops straight back into the hook.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Exact specs</span>
+  <h2>What I'll build every time</h2>
+  <div class="spec-grid">
+    <dl>
+      <dt>Length</dt><dd>45–55 seconds. The top videos are 45–60.</dd>
+      <dt>Script</dt><dd>115–130 words, read at about 150 words a minute. Short, punchy sentences.</dd>
+      <dt>Cuts</dt><dd>12–14 shots, each about 3–3.5 seconds. Every shot has a slow push-in or pan, so nothing sits still.</dd>
+      <dt>Voice</dt><dd>A calm, curious male narrator with a documentary feel, pausing between beats.</dd>
+      <dt>Captions</dt><dd>Bold white capitals with a black outline, 1–3 words at a time, timed to each word. The spoken word turns yellow. They sit in the lower middle of the screen.</dd>
+      <dt>Top text</dt><dd>The title question stays at the top for the first 3 seconds, with the key word in yellow.</dd>
+      <dt>Visuals</dt><dd>Stylized 3D cartoon, like a glossy animated movie, with the same character in every episode.</dd>
+      <dt>Sound</dt><dd>A low synth bed, a whoosh on every cut, a bass hit on every stat badge, and a sudden silence at the "freeze" moment.</dd>
+      <dt>Ending</dt><dd>Back to the first shot, then the YES/NO question.</dd>
+    </dl>
+    <div>
+      <div class="phone" aria-label="Mockup of a video frame showing caption style">
+        <div class="top">What if friction <em>disappeared</em> for 5 seconds?</div>
+        <div class="badge">GRIP: 0%</div>
+        <div class="cap">every <span>car</span></div>
+        <div class="fig"></div>
+      </div>
+      <p class="mock-note">Caption and badge style, drawn to scale</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">What makes it ours</span>
+  <h2>We copy the shape, not their videos</h2>
+  <div class="twists">
+    <div><h3>One recurring character</h3><p>The top channel uses a generic guy. Ours will be a single named mascot, so viewers recognize us in two frames. It also protects us from YouTube's "repetitive content" rule.</p></div>
+    <div><h3>Our own topics</h3><p>We won't remake their titles. We use the same "For 5 Seconds" pattern on questions they haven't covered.</p></div>
+    <div><h3>Real, sourced science</h3><p>Perplexity checks every number before we animate it. Their comments are full of people correcting the physics, and we want to be the channel that gets it right.</p></div>
+    <div><h3>Original everything</h3><p>The visuals are AI-made, the music is original or royalty-free, and the voice is AI. We never use anyone else's footage or songs.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">First ten episodes</span>
+  <h2>Topic list</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>#</th><th>Title</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr class="pick"><td class="n">1</td><td>What If Friction Disappeared For 5 Seconds <span class="chip first">first video</span></td><td>Very visual chaos that's easy to film, and the top channel hasn't made it</td></tr>
+        <tr class="pick"><td class="n">2</td><td>What If You Had 500 IQ</td><td>~385K searches a month, competition 37/100</td></tr>
+        <tr class="pick"><td class="n">3</td><td>What If You Woke Up 20,000 Years Ago</td><td>~133K searches, competition 27/100, and it borrows the nostalgia trend</td></tr>
+        <tr><td class="n">4</td><td>What If Earth Spun 10x Faster For 5 Seconds</td><td>A cousin of their top format, on a new topic</td></tr>
+        <tr><td class="n">5</td><td>What If Everyone On Earth Jumped At Once</td><td>A classic question people love to argue about</td></tr>
+        <tr><td class="n">6</td><td>What If You Fell Into Jupiter</td><td>Space content performs well across the whole niche</td></tr>
+        <tr><td class="n">7</td><td>What If All Ice On Earth Melted Overnight</td><td>Strong visuals and real data to show</td></tr>
+        <tr><td class="n">8</td><td>What If You Had Infinite IQ</td><td>Search demand up 256%</td></tr>
+        <tr><td class="n">9</td><td>What If Sound Disappeared For 5 Seconds</td><td>Uses the "sudden silence" sound trick</td></tr>
+        <tr><td class="n">10</td><td>What If You Could Only Move During Lightning</td><td>A weird premise that gets comments</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Search numbers are vidIQ monthly estimates. Shorts mostly grow from the feed, not search, so search demand is a bonus, not the main reason to pick a topic.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Cost per video</span>
+  <h2>Covered by the Magnific plan you already have</h2>
+  <div class="cost">
+    <div><span>12–14 scene images, including retries</span><span>~250 credits</span></div>
+    <div><span>5 key shots turned into 5-second video clips (Kling 2.5)</span><span>~700 credits</span></div>
+    <div><span>AI narration (ElevenLabs voice inside Magnific)</span><span>~150 credits</span></div>
+    <div><span>Motion on the other shots, plus captions, sound and edit (done by me)</span><span>0</span></div>
+    <div class="total"><span>About one video</span><span>~1,100 credits</span></div>
+  </div>
+  <p class="note">You have 20,223 Magnific credits left, which is enough for about 15–18 videos with $0 of new spending. Runway isn't needed yet. Music: Suno's free plan does not allow commercial use, so for a channel we want to monetize, we use Suno Pro ($10/month), Magnific's music generator, or the free YouTube Audio Library.</p>
+</section>
+
+<section>
+  <span class="eyebrow">House rules</span>
+  <h2>Guardrails</h2>
+  <ul class="rules">
+    <li>We never download, re-upload or crop anyone's video. We only study their structure.</li>
+    <li>Every fact in a script gets checked against a source before any visuals are made.</li>
+    <li>We turn on YouTube's "altered or synthetic content" label when it's needed.</li>
+    <li>Nothing is bought, posted or published until Jeremiah says yes.</li>
+  </ul>
+</section>
+
+<footer>The format was studied from three breakout videos: "What If Time Stopped For 5 Seconds" (YouTube, 14.3M views), "What if all mosquitoes disappeared?" (Instagram, 1.2M) and "What if your reaction time was 10x faster?" (Instagram, 4M). Data: vidIQ, Nov 13, 2026.</footer>
+</div>
